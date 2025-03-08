@@ -1,27 +1,31 @@
-# QrCode
+# 📍 QR Code Generator for Google Maps 🌍
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+A simple Angular web app that **generates QR codes** for geographical locations. Enter **latitude & longitude** or a **Google Maps link**, and get a scannable QR code instantly! 🚀  
 
-## Development server
+## 🔹 Features  
+✅ Accepts **latitude & longitude** in DMS format (e.g., `13°57'10.0"N 75°33'29.0"E`)  
+✅ Converts coordinates into **Google Maps links**  
+✅ Generates **QR codes** for locations  
+✅ Built with **Angular, ngx-qrcode, and Reactive Forms**  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🔗 Live Demo  
+👉 [Try it here!](https://karthik-bhoshle060.github.io/qr_code_generator_for_google_map/)  
 
-## Code scaffolding
+## 🛠 Tech Stack  
+- **Angular** (Frontend Framework)  
+- **ngx-qrcode** (QR Code Generator)  
+- **Reactive Forms** (Form Handling)  
+- **Bootstrap** (UI Styling)  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🚀 How to Use  
+1️⃣ Enter **latitude & longitude** in the form.  
+2️⃣ Click **"Generate QR Code"**.  
+3️⃣ Scan the QR code to open the location in **Google Maps**.  
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 🛠 Setup Locally  
+Want to run it on your local machine? Follow these steps:  
+```sh
+git clone https://github.com/karthik-bhoshle060/qr_code_generator_for_google_map.git
+cd qr_code_generator_for_google_map
+npm install
+ng serve
