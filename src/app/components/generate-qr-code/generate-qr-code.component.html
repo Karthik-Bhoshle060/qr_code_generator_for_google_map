@@ -1,0 +1,48 @@
+<div class="container">
+  <h2>QR Code Generator for Google Maps</h2>
+
+  <form [formGroup]="qrForm" (ngSubmit)="generateQR()">
+    <label>Latitude :</label>
+    <input type="text" formControlName="latitude" placeholder="13°5710.0'N" />
+    <div
+      *ngIf="qrForm.get('latitude')?.invalid && qrForm.get('latitude')?.touched"
+    >
+      <small class="error">Enter valid Latitude in DMS format.</small>
+    </div>
+
+    <label>Longitude:</label>
+    <input type="text" formControlName="longitude" placeholder="75°33'29.0'E" />
+    <div
+      *ngIf="
+        qrForm.get('longitude')?.invalid && qrForm.get('longitude')?.touched
+      "
+    >
+      <small class="error">Enter valid Longitude in DMS format.</small>
+    </div>
+    <div><h1>or</h1></div>
+    <label>Google Maps URL (Optional):</label>
+    <input
+      type="text"
+      formControlName="mapUrl"
+      placeholder="Enter Google Maps URL"
+    />
+
+    <button
+      type="submit"
+      [disabled]="qrForm.get('mapUrl')?.value ? false : qrForm.invalid"
+    >
+      Generate QR Code
+    </button>
+  </form>
+
+  <div *ngIf="qrData">
+    <h3>Generated QR Code:</h3>
+    <qrcode
+      [qrdata]="qrData"
+      [width]="200"
+      (qrCodeURL)="onChangeURL($event)"
+      [errorCorrectionLevel]="'M'"
+    ></qrcode>
+    <a [href]="qrCodeDownloadLink" download="qrcode">Download</a>
+  </div>
+</div>

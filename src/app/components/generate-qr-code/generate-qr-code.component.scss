@@ -1,0 +1,49 @@
+.container {
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+  a {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  h1 {
+    margin: 5px;
+  }
+  form {
+    padding: 10px;
+    border: 2px solid #28a745;
+    border-radius: 10px;
+    input {
+      width: 90%;
+      padding: 8px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background-color: #ccc;
+    }
+
+    .error {
+      color: red;
+      font-size: 12px;
+    }
+  }
+}
